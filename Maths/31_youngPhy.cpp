@@ -1,7 +1,7 @@
 /*
-610 A
-Pasha and Stick
-https://codeforces.com/problemset/problem/610/A
+69 A
+Young Physicist
+https://codeforces.com/problemset/problem/69/A
 */
 
 #include <bits/stdc++.h>
@@ -19,13 +19,21 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll n;
-    cin>>n;
+    int n,x,y,z;
+    int sumX=0,sumY=0,sumZ=0;
 
-    if(n%2)
-        cout<<0<<"\n";
+    cin>>n;
+    while(n--){
+        cin>>x>>y>>z;
+        sumX+=x;
+        sumY+=y;
+        sumZ+=z;
+    }
+
+    if(sumX==0 && sumY==0 && sumZ==0)
+        cout<<"YES";
     else 
-        cout<<(n/2-1)/2<<"\n";
+        cout<<"NO";
 
     return 0;
 }
